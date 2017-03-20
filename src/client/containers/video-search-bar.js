@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import YTSearch from 'youtube-api-search';
-import YTAPIKEY from '../../youtube.config';
+import YTAPIKEY from '../../../youtube.config';
 
 import { setNewVideos } from '../actions/video-actions';
 
