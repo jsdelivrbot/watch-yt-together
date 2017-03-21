@@ -8,7 +8,12 @@ class VideoPlayer extends Component {
     if (videoID == '') {
       return <div></div>;
     }
-    return <Youtube videoId={ videoID }/>;
+    return (
+      <Youtube
+        videoId={ videoID }
+        onPause={ () => console.log("FIRED") }
+      />
+    );
   }
 }
 
