@@ -10,7 +10,7 @@ export default class Room extends Component {
       <div>
         <VideoSearchBar/>
         <VideoPlayer/>
-        <VideoList/>
+        <VideoListItem/>
       </div>
     );
   }

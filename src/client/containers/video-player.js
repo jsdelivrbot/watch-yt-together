@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import Youtube from 'react-youtube';
 
 class VideoPlayer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { player: null };
+  }
   render() {
     const { videoID } = this.props;
     if (videoID == '') {
@@ -11,9 +15,13 @@ class VideoPlayer extends Component {
     return (
       <Youtube
         videoId={ videoID }
-        onPause={ () => console.log("FIRED") }
+        onReady={ this.onReady }
       />
     );
+  }
+
+  onReady(e) {
+    this.setState({ player: e.target });
   }
 }
 
